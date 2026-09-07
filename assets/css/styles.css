@@ -525,7 +525,7 @@ body.is-page-leaving main {
   height: clamp(420px, 60svh, 760px);
   overflow: hidden;
   background: #f2f0ed;
-  cursor: ew-resize;
+  cursor: pointer;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
