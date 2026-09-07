@@ -19,33 +19,8 @@
   var projects = [
     {
       key: "ostrov-realized-01",
-      title: "OSTROV — REALIZED",
+      title: "OSTROV I",
       url: "https://www.behance.net/gallery/253001777/OSTROV-REALIZED"
-    },
-    {
-      key: "novopesch-realized",
-      title: "NOVOPESCHANAYA — REALIZED",
-      url: "https://www.behance.net/gallery/253000679/NOVOPESCHANAYA-REALIZED"
-    },
-    {
-      key: "ostrov-realized-02",
-      title: "OSTROV — REALIZED",
-      url: "https://www.behance.net/gallery/252999577/OSTROV-REALIZED"
-    },
-    {
-      key: "novopesch",
-      title: "NOVOPESCHANAYA",
-      url: "https://www.behance.net/gallery/224255241/NOVOPESCHANAYA"
-    },
-    {
-      key: "ostrov-2",
-      title: "OSTROV 2",
-      url: "https://www.behance.net/gallery/224252107/OSTROV-2"
-    },
-    {
-      key: "ostrov",
-      title: "OSTROV",
-      url: "https://www.behance.net/gallery/224247955/OSTROV"
     },
     {
       key: "mihalkovo-park",
@@ -58,24 +33,14 @@
       url: "https://www.behance.net/gallery/203477253/AVENUE-PARK"
     },
     {
-      key: "avenue-park",
-      title: "AVENUE PARK",
-      url: "https://www.behance.net/gallery/123344523/AVENUE-PARK"
+      key: "novopesch-realized",
+      title: "NOVOPESCHANAYA",
+      url: "https://www.behance.net/gallery/253000679/NOVOPESCHANAYA-REALIZED"
     },
     {
-      key: "gothic-apartment",
-      title: "GOTHIC APARTMENT",
-      url: "https://www.behance.net/gallery/139708123/GOTHIC-APARTMENT"
-    },
-    {
-      key: "avenue-park-concept",
-      title: "AVENUE PARK — CONCEPT",
-      url: "https://www.behance.net/gallery/139710417/AVENUE-PARK-concept"
-    },
-    {
-      key: "mens-apartment",
-      title: "MEN'S APARTMENT",
-      url: "https://www.behance.net/gallery/139710183/MENS-APARTMENT"
+      key: "ostrov-realized-02",
+      title: "OSTROV II",
+      url: "https://www.behance.net/gallery/252999577/OSTROV-REALIZED"
     }
   ].map(function (project) {
     project.images = imagePaths(project.key);
@@ -426,5 +391,5 @@
 
   var hashKey = window.location.hash.replace(/^#/, "");
   var initialProject = projects.findIndex(function (project) { return project.key === hashKey; });
-  selectProject(initialProject === -1 ? 0 : initialProject, { instant: true, skipHash: initialProject === -1 });
+  selectProject(initialProject === -1 ? 0 : initialProject, { instant: true, skipHash: !hashKey });
 })();
