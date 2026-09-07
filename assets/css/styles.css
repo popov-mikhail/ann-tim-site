@@ -729,6 +729,7 @@ body.is-lightbox-open { overflow: hidden; }
   position: relative;
   display: grid;
   min-height: 0;
+  padding: clamp(16px, 3vh, 42px) clamp(48px, 7vw, 150px);
   overflow: hidden;
   place-items: center;
   touch-action: pan-y;
@@ -1026,6 +1027,10 @@ body.is-lightbox-open { overflow: hidden; }
 
   .project-lightbox__header {
     padding-left: 10px;
+  }
+
+  .project-lightbox__stage {
+    padding: clamp(12px, 2.5vh, 24px) clamp(10px, 3vw, 18px);
   }
 
   .project-lightbox__title {
