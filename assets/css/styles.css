@@ -422,11 +422,8 @@ body.is-page-leaving main {
 
 .project-tabs button {
   position: relative;
-  display: grid;
+  display: block;
   flex: 0 0 auto;
-  grid-template-columns: auto 1fr;
-  align-items: baseline;
-  gap: 10px;
   min-width: max-content;
   padding: 0 0 1px;
   color: var(--ink-mute);
@@ -457,18 +454,8 @@ body.is-page-leaving main {
   transform: scaleX(1);
 }
 
-.project-tabs button[aria-selected="true"] .project-tabs__number {
-  color: var(--ink-strong);
-}
-
 .project-tabs button[aria-selected="true"] .project-tabs__title {
   font-weight: 400;
-}
-
-.project-tabs__number {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--ink-mute);
 }
 
 .project-tabs__title {
@@ -510,10 +497,10 @@ body.is-page-leaving main {
 
 .project-stage {
   position: relative;
-  height: clamp(420px, 60svh, 760px);
+  height: clamp(440px, 66svh, 820px);
   overflow: hidden;
   background: var(--paper);
-  cursor: default;
+  cursor: zoom-in;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -618,16 +605,20 @@ body.is-page-leaving main {
 }
 
 .project-thumbs {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(6px, 0.75vw, 12px);
-  width: min(820px, 100%);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: clamp(8px, 1vw, 18px);
+  width: min(660px, 100%);
+  width: min(clamp(380px, 55svh, 660px), 100%);
   margin: 0 auto;
 }
 
 .project-thumbs button {
   position: relative;
-  aspect-ratio: 4 / 3;
+  flex: 0 1 auto;
+  height: clamp(96px, 7.4vw, 136px);
+  aspect-ratio: var(--thumb-ratio, 3 / 4);
   overflow: hidden;
   background: var(--paper);
   opacity: 0.48;
@@ -655,9 +646,10 @@ body.is-page-leaving main {
 }
 
 .project-thumbs img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* ----------------------------------------- полноэкранный просмотр фото -- */
@@ -972,8 +964,8 @@ body.is-lightbox-open { overflow: hidden; }
   }
 
   .project-stage {
-    height: min(48svh, 500px);
-    min-height: 340px;
+    height: min(52svh, 540px);
+    min-height: 360px;
   }
 
   .project-viewer__controls {
@@ -998,7 +990,9 @@ body.is-lightbox-open { overflow: hidden; }
     padding-left: max(12px, env(safe-area-inset-left));
   }
 
-  .project-thumbs button { aspect-ratio: 1 / 1; }
+  .project-thumbs button {
+    height: clamp(72px, 22vw, 92px);
+  }
 
   .project-lightbox {
     padding-right: max(10px, env(safe-area-inset-right));

@@ -212,17 +212,26 @@
     project.images.forEach(function (image, index) {
       var button = document.createElement("button");
       var thumbnail = document.createElement("img");
+
+      function preserveThumbnailRatio() {
+        if (!thumbnail.naturalWidth || !thumbnail.naturalHeight) return;
+        button.style.setProperty(
+          "--thumb-ratio",
+          thumbnail.naturalWidth + " / " + thumbnail.naturalHeight
+        );
+      }
+
       button.type = "button";
       button.setAttribute("role", "tab");
       button.setAttribute("aria-label", "Показать фотографию " + (index + 1) + " из 5");
       button.addEventListener("click", function () { showImage(index); });
 
-      thumbnail.src = image.thumb;
       thumbnail.alt = "";
-      thumbnail.width = 480;
-      thumbnail.height = 480;
       thumbnail.loading = index === 0 ? "eager" : "lazy";
       thumbnail.decoding = "async";
+      thumbnail.addEventListener("load", preserveThumbnailRatio, { once: true });
+      thumbnail.src = image.thumb;
+      if (thumbnail.complete) preserveThumbnailRatio();
       button.appendChild(thumbnail);
       thumbsBar.appendChild(button);
     });
@@ -275,16 +284,12 @@
 
   projects.forEach(function (project, index) {
     var button = document.createElement("button");
-    var number = document.createElement("span");
     var title = document.createElement("span");
     button.type = "button";
     button.setAttribute("role", "tab");
     button.setAttribute("aria-label", "Проект " + (index + 1) + " из " + projects.length + ": " + project.title);
-    number.className = "project-tabs__number";
-    number.textContent = twoDigits(index + 1);
     title.className = "project-tabs__title";
     title.textContent = project.title;
-    button.appendChild(number);
     button.appendChild(title);
     button.addEventListener("click", function () { selectProject(index); });
     tabsBar.appendChild(button);
