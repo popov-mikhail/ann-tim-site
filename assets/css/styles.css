@@ -408,6 +408,7 @@ body.is-page-leaving main {
 
 .project-tabs {
   display: flex;
+  justify-content: center;
   gap: clamp(25px, 2.7vw, 50px);
   padding: 0 0 17px;
   overflow-x: auto;
@@ -937,6 +938,7 @@ body.is-lightbox-open { overflow: hidden; }
   }
 
   .project-tabs {
+    justify-content: flex-start;
     gap: 28px;
     padding-right: max(20px, env(safe-area-inset-right));
     padding-left: max(20px, env(safe-area-inset-left));
