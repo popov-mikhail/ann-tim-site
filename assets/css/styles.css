@@ -469,7 +469,7 @@ body.is-page-leaving main {
 
 .project-viewer {
   position: relative;
-  margin-top: clamp(10px, 1.1vw, 18px);
+  margin-top: clamp(20px, 2.2vw, 36px);
 }
 
 .project-viewer__header {
@@ -503,7 +503,7 @@ body.is-page-leaving main {
 
 .project-stage {
   position: relative;
-  height: clamp(340px, 52svh, 640px);
+  height: clamp(374px, 57.2svh, 704px);
   overflow: hidden;
   background: var(--paper);
   cursor: zoom-in;
@@ -953,7 +953,7 @@ body.is-lightbox-open { overflow: hidden; }
   .project-tabs__title { font-size: 11px; }
 
   .project-viewer {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .project-viewer__header {
@@ -971,8 +971,8 @@ body.is-lightbox-open { overflow: hidden; }
   }
 
   .project-stage {
-    height: min(48svh, 480px);
-    min-height: 320px;
+    height: min(52.8svh, 528px);
+    min-height: 352px;
   }
 
   .project-viewer__controls {
