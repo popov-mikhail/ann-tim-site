@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://popov-mikhail.github.io/ann-tim-site/projects/">
 <link rel="icon" href="../assets/img/favicon.png" type="image/png">
-<link rel="stylesheet" href="../assets/css/styles.css?v=7">
+<link rel="stylesheet" href="../assets/css/styles.css?v=8">
 </head>
 <body>
 <a class="skip-link" href="#main">К основному содержанию</a>
@@ -61,7 +61,7 @@
     </header>
 
     <div class="project-stage" data-project-stage tabindex="0"
-         aria-label="Фотографии проекта. Листайте свайпом или нажимайте на левую и правую часть изображения">
+         aria-label="Фотография проекта. Нажмите, чтобы открыть на весь экран; листайте свайпом или стрелками">
       <img class="project-stage__image is-active" data-project-image-layer
            src="../assets/img/projects/ostrov-realized-01/01.webp"
            alt="Проект OSTROV — REALIZED, фотография 1 из 5"
@@ -81,13 +81,36 @@
       <button class="project-viewer__arrow" type="button" data-image-next aria-label="Следующая фотография">
         <span aria-hidden="true">→</span>
       </button>
+      <button class="project-viewer__fullscreen" type="button" data-open-lightbox>
+        На весь экран <span aria-hidden="true">⛶</span>
+      </button>
     </div>
 
     <div class="project-thumbs" data-project-thumbs role="tablist" aria-label="Фотографии выбранного проекта"></div>
   </section>
 </main>
 
+<div class="project-lightbox" data-project-lightbox role="dialog" aria-modal="true"
+     aria-labelledby="lightbox-title" hidden>
+  <header class="project-lightbox__header">
+    <p class="project-lightbox__title" id="lightbox-title" data-lightbox-title>OSTROV — REALIZED</p>
+    <button class="project-lightbox__close" type="button" data-close-lightbox aria-label="Закрыть полноэкранный просмотр">
+      <span aria-hidden="true"></span>
+    </button>
+  </header>
+  <div class="project-lightbox__stage" data-lightbox-stage>
+    <button class="project-lightbox__arrow project-lightbox__arrow--prev" type="button"
+            data-lightbox-prev aria-label="Предыдущая фотография"><span aria-hidden="true">←</span></button>
+    <img class="project-lightbox__image" data-lightbox-image alt="" decoding="async">
+    <button class="project-lightbox__arrow project-lightbox__arrow--next" type="button"
+            data-lightbox-next aria-label="Следующая фотография"><span aria-hidden="true">→</span></button>
+  </div>
+  <p class="project-lightbox__counter" aria-live="polite">
+    <span data-lightbox-current>01</span><span aria-hidden="true"> / </span><span>05</span>
+  </p>
+</div>
+
 <script src="../assets/js/main.js?v=5" defer></script>
-<script src="../assets/js/projects.js?v=1" defer></script>
+<script src="../assets/js/projects.js?v=2" defer></script>
 </body>
 </html>

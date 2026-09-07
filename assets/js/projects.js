@@ -92,11 +92,22 @@
   var imageCounter = gallery.querySelector("[data-image-current]");
   var prevButton = gallery.querySelector("[data-image-prev]");
   var nextButton = gallery.querySelector("[data-image-next]");
+  var openLightboxButton = gallery.querySelector("[data-open-lightbox]");
+  var lightbox = document.querySelector("[data-project-lightbox]");
+  var lightboxStage = lightbox.querySelector("[data-lightbox-stage]");
+  var lightboxImage = lightbox.querySelector("[data-lightbox-image]");
+  var lightboxTitle = lightbox.querySelector("[data-lightbox-title]");
+  var lightboxCounter = lightbox.querySelector("[data-lightbox-current]");
+  var closeLightboxButton = lightbox.querySelector("[data-close-lightbox]");
+  var lightboxPrevButton = lightbox.querySelector("[data-lightbox-prev]");
+  var lightboxNextButton = lightbox.querySelector("[data-lightbox-next]");
   var activeProject = 0;
   var activeImage = 0;
   var activeLayer = 0;
   var imageRequest = 0;
   var pointerStart = null;
+  var lightboxPointerStart = null;
+  var lightboxReturnFocus = null;
 
   function twoDigits(number) {
     return String(number).padStart(2, "0");
@@ -133,6 +144,45 @@
     imageCounter.textContent = twoDigits(activeImage + 1);
   }
 
+  function lightboxIsOpen() {
+    return !lightbox.hidden;
+  }
+
+  function syncLightbox() {
+    if (!lightboxIsOpen()) return;
+    var project = projects[activeProject];
+    lightboxImage.src = project.images[activeImage].full;
+    lightboxImage.alt = imageAlt(project, activeImage);
+    lightboxTitle.textContent = project.title;
+    lightboxCounter.textContent = twoDigits(activeImage + 1);
+    lightbox.classList.remove("is-loading");
+  }
+
+  function openLightbox() {
+    lightboxReturnFocus = document.activeElement;
+    lightbox.hidden = false;
+    document.body.classList.add("is-lightbox-open");
+    syncLightbox();
+    window.requestAnimationFrame(function () { closeLightboxButton.focus(); });
+  }
+
+  function closeLightbox() {
+    if (!lightboxIsOpen()) return;
+    lightbox.hidden = true;
+    lightbox.classList.remove("is-loading");
+    document.body.classList.remove("is-lightbox-open");
+    if (lightboxReturnFocus && typeof lightboxReturnFocus.focus === "function") {
+      lightboxReturnFocus.focus({ preventScroll: true });
+    }
+  }
+
+  function showLightboxImage(offset) {
+    lightbox.classList.add("is-loading");
+    showImage(activeImage + offset).then(function (changed) {
+      if (!changed) lightbox.classList.remove("is-loading");
+    });
+  }
+
   function showImage(nextIndex, instant) {
     var project = projects[activeProject];
     var next = (nextIndex + project.images.length) % project.images.length;
@@ -142,11 +192,13 @@
     activeImage = next;
     syncThumbs();
     gallery.classList.add("is-image-loading");
+    if (lightboxIsOpen()) lightbox.classList.add("is-loading");
 
     var current = layers[activeLayer];
     if (current.getAttribute("src") === nextSource && current.naturalWidth > 0) {
       current.alt = imageAlt(project, next);
       gallery.classList.remove("is-image-loading");
+      syncLightbox();
       warmNearbyImages();
       return Promise.resolve(true);
     }
@@ -169,6 +221,7 @@
       current.setAttribute("aria-hidden", "true");
       activeLayer = 1 - activeLayer;
       gallery.classList.remove("is-image-loading");
+      syncLightbox();
 
       window.requestAnimationFrame(function () {
         nextLayer.classList.remove("is-instant");
@@ -177,6 +230,7 @@
       return true;
     }).catch(function () {
       if (request === imageRequest) gallery.classList.remove("is-image-loading");
+      if (request === imageRequest) lightbox.classList.remove("is-loading");
       return false;
     });
   }
@@ -215,6 +269,16 @@
     window.history.replaceState(null, "", "#" + project.key);
   }
 
+  function centerProjectTab(tab, instant) {
+    var targetLeft = tab.offsetLeft - (tabsBar.clientWidth - tab.offsetWidth) / 2;
+    var left = Math.max(0, targetLeft);
+    if (typeof tabsBar.scrollTo === "function") {
+      tabsBar.scrollTo({ left: left, behavior: instant ? "auto" : "smooth" });
+    } else {
+      tabsBar.scrollLeft = left;
+    }
+  }
+
   function selectProject(nextIndex, options) {
     var settings = options || {};
     var next = (nextIndex + projects.length) % projects.length;
@@ -238,7 +302,7 @@
 
     var activeTab = tabsBar.children[activeProject];
     if (activeTab) {
-      activeTab.scrollIntoView({ behavior: settings.instant ? "auto" : "smooth", block: "nearest", inline: "center" });
+      centerProjectTab(activeTab, settings.instant);
       if (settings.focus) activeTab.focus({ preventScroll: true });
     }
 
@@ -281,11 +345,19 @@
 
   prevButton.addEventListener("click", function () { showImage(activeImage - 1); });
   nextButton.addEventListener("click", function () { showImage(activeImage + 1); });
+  openLightboxButton.addEventListener("click", openLightbox);
+  closeLightboxButton.addEventListener("click", closeLightbox);
+  lightboxPrevButton.addEventListener("click", function () { showLightboxImage(-1); });
+  lightboxNextButton.addEventListener("click", function () { showLightboxImage(1); });
 
   stage.addEventListener("keydown", function (event) {
-    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-    event.preventDefault();
-    showImage(activeImage + (event.key === "ArrowRight" ? 1 : -1));
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showImage(activeImage + (event.key === "ArrowRight" ? 1 : -1));
+    } else if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openLightbox();
+    }
   });
 
   stage.addEventListener("pointerdown", function (event) {
@@ -305,10 +377,51 @@
     if (horizontalSwipe) {
       showImage(activeImage + (dx < 0 ? 1 : -1));
     } else if (tap) {
-      var bounds = stage.getBoundingClientRect();
-      showImage(activeImage + (event.clientX >= bounds.left + bounds.width / 2 ? 1 : -1));
+      openLightbox();
     }
     pointerStart = null;
+  });
+
+  lightboxStage.addEventListener("pointerdown", function (event) {
+    if (!event.isPrimary) return;
+    lightboxPointerStart = { x: event.clientX, y: event.clientY };
+  });
+
+  lightboxStage.addEventListener("pointercancel", function () { lightboxPointerStart = null; });
+
+  lightboxStage.addEventListener("pointerup", function (event) {
+    if (!lightboxPointerStart || !event.isPrimary) return;
+    var dx = event.clientX - lightboxPointerStart.x;
+    var dy = event.clientY - lightboxPointerStart.y;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      showLightboxImage(dx < 0 ? 1 : -1);
+    }
+    lightboxPointerStart = null;
+  });
+
+  lightbox.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeLightbox();
+      return;
+    }
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showLightboxImage(event.key === "ArrowRight" ? 1 : -1);
+      return;
+    }
+    if (event.key !== "Tab") return;
+
+    var controls = [closeLightboxButton, lightboxPrevButton, lightboxNextButton];
+    var first = controls[0];
+    var last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
 
   var hashKey = window.location.hash.replace(/^#/, "");
