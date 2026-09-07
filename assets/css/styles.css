@@ -170,7 +170,9 @@ button {
 }
 
 .nav a {
+  position: relative;
   display: block;
+  padding-bottom: 7px;
   font-size: var(--nav-size);
   font-weight: 300;
   line-height: 1;
@@ -178,13 +180,32 @@ button {
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--ink);
-  transition: color 0.25s var(--ease);
+  transition: color 0.25s var(--ease), font-weight 0.25s var(--ease);
 }
 .nav a:hover { color: var(--ink-strong); }
+
+.nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--ink-strong);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.45);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
 
 /* Текущий раздел */
 .nav a[aria-current="page"] {
   color: var(--ink-strong);
+  font-weight: 400;
+}
+
+.nav a[aria-current="page"]::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 /* Кнопка меню — только на мобильных */
@@ -366,13 +387,12 @@ body.is-page-leaving main {
 
 .projects-gallery {
   min-height: calc(100svh - var(--header-h));
-  padding: clamp(34px, 3.8vw, 70px) var(--pad-right)
+  padding: clamp(18px, 2vw, 34px) var(--pad-right)
            clamp(64px, 6vw, 112px) var(--pad-left);
   overflow: hidden;
   border-top: 1px solid var(--line);
 }
 
-.projects-gallery__heading,
 .project-tabs-wrap,
 .project-viewer {
   width: 100%;
@@ -381,33 +401,9 @@ body.is-page-leaving main {
   margin-left: auto;
 }
 
-.projects-gallery__heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.projects-gallery__heading h1 {
-  margin: 0;
-  font-size: clamp(28px, 3.2vw, 58px);
-  font-weight: 200;
-  line-height: 1;
-  letter-spacing: 0.06em;
-}
-
-.projects-gallery__heading p {
-  margin: 0;
-  font-size: clamp(11px, 0.78vw, 14px);
-  font-weight: 300;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-}
-
 .project-tabs-wrap {
   position: relative;
-  margin-top: clamp(34px, 4vw, 66px);
+  margin-top: 0;
 }
 
 .project-tabs {
@@ -935,32 +931,16 @@ body.is-lightbox-open { overflow: hidden; }
   .page { justify-content: flex-start; padding-top: 48px; }
 
   .projects-gallery {
-    padding: 30px 0 max(56px, env(safe-area-inset-bottom));
+    padding: 18px 0 max(56px, env(safe-area-inset-bottom));
   }
 
-  .projects-gallery__heading,
   .project-viewer__header {
     padding-right: max(20px, env(safe-area-inset-right));
     padding-left: max(20px, env(safe-area-inset-left));
   }
 
-  .projects-gallery__heading {
-    align-items: flex-end;
-  }
-
-  .projects-gallery__heading h1 {
-    font-size: clamp(28px, 9vw, 40px);
-  }
-
-  .projects-gallery__heading p {
-    max-width: 12em;
-    font-size: 9px;
-    line-height: 1.45;
-    text-align: right;
-  }
-
   .project-tabs-wrap {
-    margin-top: 31px;
+    margin-top: 0;
     overflow: hidden;
   }
 
