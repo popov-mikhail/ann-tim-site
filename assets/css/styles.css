@@ -387,7 +387,7 @@ body.is-page-leaving main {
 
 .projects-gallery {
   min-height: calc(100svh - var(--header-h));
-  padding: clamp(18px, 2vw, 34px) var(--pad-right)
+  padding: clamp(18px, 2vw, 34px) var(--pad-left)
            clamp(64px, 6vw, 112px) var(--pad-left);
   overflow: hidden;
   border-top: 1px solid var(--line);
@@ -408,7 +408,7 @@ body.is-page-leaving main {
 
 .project-tabs {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: clamp(25px, 2.7vw, 50px);
   padding: 0 0 17px;
   overflow-x: auto;
@@ -468,15 +468,20 @@ body.is-page-leaving main {
 }
 
 .project-viewer {
-  margin-top: clamp(18px, 2vw, 32px);
+  position: relative;
+  margin-top: clamp(10px, 1.1vw, 18px);
 }
 
 .project-viewer__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-height: 32px;
-  margin-bottom: clamp(12px, 1.2vw, 20px);
+  min-height: 0;
+  margin: 0;
 }
 
 .project-viewer__more {
@@ -498,7 +503,7 @@ body.is-page-leaving main {
 
 .project-stage {
   position: relative;
-  height: clamp(440px, 66svh, 820px);
+  height: clamp(340px, 52svh, 640px);
   overflow: hidden;
   background: var(--paper);
   cursor: zoom-in;
@@ -610,15 +615,15 @@ body.is-page-leaving main {
   align-items: stretch;
   justify-content: space-between;
   gap: clamp(8px, 1vw, 18px);
-  width: min(660px, 100%);
-  width: min(clamp(380px, 55svh, 660px), 100%);
+  width: min(520px, 100%);
+  width: min(clamp(300px, 44svh, 520px), 100%);
   margin: 0 auto;
 }
 
 .project-thumbs button {
   position: relative;
   flex: 0 1 auto;
-  height: clamp(96px, 7.4vw, 136px);
+  height: clamp(72px, 5.8vw, 108px);
   aspect-ratio: var(--thumb-ratio, 3 / 4);
   overflow: hidden;
   background: var(--paper);
@@ -938,7 +943,6 @@ body.is-lightbox-open { overflow: hidden; }
   }
 
   .project-tabs {
-    justify-content: flex-start;
     gap: 28px;
     padding-right: max(20px, env(safe-area-inset-right));
     padding-left: max(20px, env(safe-area-inset-left));
@@ -949,13 +953,14 @@ body.is-lightbox-open { overflow: hidden; }
   .project-tabs__title { font-size: 11px; }
 
   .project-viewer {
-    margin-top: 16px;
+    margin-top: 10px;
   }
 
   .project-viewer__header {
+    position: static;
     align-items: center;
     min-height: 28px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
 
   .project-viewer__more {
@@ -966,8 +971,8 @@ body.is-lightbox-open { overflow: hidden; }
   }
 
   .project-stage {
-    height: min(52svh, 540px);
-    min-height: 360px;
+    height: min(48svh, 480px);
+    min-height: 320px;
   }
 
   .project-viewer__controls {
