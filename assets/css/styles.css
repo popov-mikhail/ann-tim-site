@@ -443,7 +443,7 @@ body.is-page-leaving main {
   right: 0;
   bottom: -18px;
   left: 0;
-  height: 1px;
+  height: 2px;
   background: var(--ink-strong);
   content: "";
   opacity: 0;
@@ -461,6 +461,14 @@ body.is-page-leaving main {
   transform: scaleX(1);
 }
 
+.project-tabs button[aria-selected="true"] .project-tabs__number {
+  color: var(--ink-strong);
+}
+
+.project-tabs button[aria-selected="true"] .project-tabs__title {
+  font-weight: 400;
+}
+
 .project-tabs__number {
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -476,32 +484,15 @@ body.is-page-leaving main {
 }
 
 .project-viewer {
-  margin-top: clamp(30px, 3.4vw, 58px);
+  margin-top: clamp(18px, 2vw, 32px);
 }
 
 .project-viewer__header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
-  margin-bottom: clamp(22px, 2.4vw, 40px);
-}
-
-.project-viewer__number {
-  margin: 0 0 10px;
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.1em;
-  color: var(--ink-mute);
-}
-
-.project-viewer__title {
-  margin: 0;
-  font-size: clamp(25px, 3vw, 54px);
-  font-weight: 200;
-  line-height: 1.04;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 32px;
+  margin-bottom: clamp(12px, 1.2vw, 20px);
 }
 
 .project-viewer__more {
@@ -983,29 +974,18 @@ body.is-lightbox-open { overflow: hidden; }
   .project-tabs__title { font-size: 11px; }
 
   .project-viewer {
-    margin-top: 30px;
+    margin-top: 16px;
   }
 
   .project-viewer__header {
-    align-items: flex-start;
-    min-height: 80px;
-    margin-bottom: 20px;
-  }
-
-  .project-viewer__number {
-    margin-bottom: 8px;
-    font-size: 9px;
-  }
-
-  .project-viewer__title {
-    max-width: 10em;
-    font-size: clamp(22px, 6.5vw, 30px);
-    line-height: 1.08;
+    align-items: center;
+    min-height: 28px;
+    margin-bottom: 12px;
   }
 
   .project-viewer__more {
     max-width: 12em;
-    padding-top: 20px;
+    padding-top: 0;
     font-size: 9px;
     text-align: right;
   }

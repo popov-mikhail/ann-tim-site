@@ -51,7 +51,6 @@
   var stage = gallery.querySelector("[data-project-stage]");
   var layers = Array.prototype.slice.call(gallery.querySelectorAll("[data-project-image-layer]"));
   var thumbsBar = gallery.querySelector("[data-project-thumbs]");
-  var projectNumber = gallery.querySelector("[data-project-number]");
   var projectTitle = gallery.querySelector("[data-project-title]");
   var projectLink = gallery.querySelector("[data-project-link]");
   var imageCounter = gallery.querySelector("[data-image-current]");
@@ -257,7 +256,6 @@
       button.setAttribute("tabindex", selected ? "0" : "-1");
     });
 
-    projectNumber.textContent = twoDigits(activeProject + 1) + " / " + twoDigits(projects.length);
     projectTitle.textContent = project.title;
     projectLink.href = project.url;
     projectLink.setAttribute("aria-label", "Подробнее о проекте " + project.title + " на Behance");
