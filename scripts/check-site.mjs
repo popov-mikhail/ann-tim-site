@@ -94,7 +94,7 @@ const projectScript = readFileSync(join(root, "assets/js/projects.js"), "utf8");
 const projectKeys = [...projectScript.matchAll(/\bkey:\s*"([^"]+)"/g)].map((match) => match[1]);
 
 for (const key of projectKeys) {
-  for (let number = 1; number <= 5; number += 1) {
+  for (let number = 1; number <= 6; number += 1) {
     const file = String(number).padStart(2, "0");
     for (const suffix of [".webp", "-thumb.webp"]) {
       const image = join(root, "assets/img/projects", key, `${file}${suffix}`);

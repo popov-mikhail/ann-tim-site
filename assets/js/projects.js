@@ -7,11 +7,11 @@
   if (!gallery) return;
 
   function imagePaths(key) {
-    return [1, 2, 3, 4, 5].map(function (number) {
+    return [1, 2, 3, 4, 5, 6].map(function (number) {
       var file = String(number).padStart(2, "0");
       return {
-        full: "../assets/img/projects/" + key + "/" + file + ".webp",
-        thumb: "../assets/img/projects/" + key + "/" + file + "-thumb.webp"
+        full: "../assets/img/projects/" + key + "/" + file + ".webp?v=2",
+        thumb: "../assets/img/projects/" + key + "/" + file + "-thumb.webp?v=2"
       };
     });
   }
@@ -78,7 +78,7 @@
   }
 
   function imageAlt(project, imageIndex) {
-    return "Проект " + project.title + ", фотография " + (imageIndex + 1) + " из 5";
+    return "Проект " + project.title + ", фотография " + (imageIndex + 1) + " из " + project.images.length;
   }
 
   function preload(url) {
@@ -232,7 +232,10 @@
 
       button.type = "button";
       button.setAttribute("role", "tab");
-      button.setAttribute("aria-label", "Показать фотографию " + (index + 1) + " из 5");
+      button.setAttribute(
+        "aria-label",
+        "Показать фотографию " + (index + 1) + " из " + project.images.length
+      );
       button.addEventListener("click", function () { showImage(index); });
 
       thumbnail.alt = "";
