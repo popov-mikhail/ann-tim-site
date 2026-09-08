@@ -25,12 +25,15 @@ function renderModules(project) {
       const eager = imageNumber === 1;
       const src = `../../assets/img/project-details/${project.slug}/${image.file}`;
       return `      <figure class="project-detail__figure">
-        <img class="project-detail__image"
+        <button class="project-detail__open" type="button" data-detail-image
+                aria-label="Открыть фотографию ${imageNumber} из ${project.imageCount} на весь экран">
+          <img class="project-detail__image"
              src="${src}"
              alt="Проект ${escapeHtml(project.title)}, фотография ${imageNumber} из ${project.imageCount}"
              width="${image.width}" height="${image.height}"
              loading="${eager ? "eager" : "lazy"}"
              ${eager ? 'fetchpriority="high" ' : ""}decoding="async">
+        </button>
       </figure>`;
     }).join("\n");
     const end = imageNumber;
@@ -69,7 +72,7 @@ for (const project of manifest.projects) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="${canonical}">
 <link rel="icon" href="../../assets/img/favicon.png" type="image/png">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=19">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=20">
 </head>
 <body class="project-detail-page">
 <a class="skip-link" href="#main">К основному содержанию</a>
@@ -96,7 +99,7 @@ for (const project of manifest.projects) {
   </nav>
 </header>
 
-<main class="project-detail" id="main">
+<main class="project-detail" id="main" data-project-detail>
   <header class="project-detail__intro">
     <a class="project-detail__back" href="../"><span aria-hidden="true">←</span> Проекты</a>
     <h1 class="project-detail__title">${escapeHtml(project.title)}</h1>
@@ -113,7 +116,29 @@ ${renderModules(project)}
   </nav>
 </main>
 
+<div class="project-lightbox" data-detail-lightbox role="dialog" aria-modal="true"
+     aria-labelledby="project-detail-lightbox-title" hidden>
+  <header class="project-lightbox__header">
+    <p class="project-lightbox__title" id="project-detail-lightbox-title">${escapeHtml(project.title)}</p>
+    <button class="project-lightbox__close" type="button" data-close-detail-lightbox
+            aria-label="Закрыть полноэкранный просмотр"><span aria-hidden="true"></span></button>
+  </header>
+  <div class="project-lightbox__stage" data-detail-lightbox-stage>
+    <button class="project-lightbox__arrow project-lightbox__arrow--prev" type="button"
+            data-detail-lightbox-prev aria-label="Предыдущая фотография"><span aria-hidden="true">←</span></button>
+    <div class="project-lightbox__media">
+      <img class="project-lightbox__image" data-detail-lightbox-image alt="" decoding="async">
+    </div>
+    <button class="project-lightbox__arrow project-lightbox__arrow--next" type="button"
+            data-detail-lightbox-next aria-label="Следующая фотография"><span aria-hidden="true">→</span></button>
+  </div>
+  <p class="project-lightbox__counter" aria-live="polite">
+    <span data-detail-lightbox-current>01</span><span aria-hidden="true"> / </span><span>${project.imageCount}</span>
+  </p>
+</div>
+
 <script src="../../assets/js/main.js?v=6" defer></script>
+<script src="../../assets/js/project-detail.js?v=1" defer></script>
 </body>
 </html>
 `;
