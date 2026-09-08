@@ -96,15 +96,31 @@
     }
 
     function warmFollowingImages(currentSlides, activeIndex) {
-      [1, 2].forEach(function (offset) {
-        var slide = currentSlides[(activeIndex + offset) % currentSlides.length];
-        var image = slide && slide.querySelector("img");
-        if (!image) return;
-        image.setAttribute("loading", "eager");
-        if (image.complete && image.naturalWidth > 0 && typeof image.decode === "function") {
-          image.decode().catch(function () {});
+      function warm() {
+        [1, 2].forEach(function (offset) {
+          var slide = currentSlides[(activeIndex + offset) % currentSlides.length];
+          var image = slide && slide.querySelector("img");
+          if (!image) return;
+          image.setAttribute("loading", "eager");
+          if (image.complete && image.naturalWidth > 0 && typeof image.decode === "function") {
+            image.decode().catch(function () {});
+          }
+        });
+      }
+
+      function scheduleWarm() {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(warm, { timeout: 1500 });
+        } else {
+          window.setTimeout(warm, 250);
         }
-      });
+      }
+
+      if (document.readyState === "complete") {
+        scheduleWarm();
+      } else {
+        window.addEventListener("load", scheduleWarm, { once: true });
+      }
     }
 
     function activateSlide(currentSlides, currentDots, nextIndex) {
@@ -284,8 +300,7 @@
       mobileView.addListener(switchVersion);
     }
 
-    show(0);
-    play();
+    show(0).then(play);
   }
 
   /* ------------------------------------------------ меню на мобильных -- */

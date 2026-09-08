@@ -16,14 +16,32 @@
 <meta property="og:image:alt" content="Интерьер и логотип студии ann tim">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://popov-mikhail.github.io/ann-tim-site/">
+<link rel="preload" as="image" type="image/webp" media="(max-width: 860px)"
+      href="assets/img/mobile/mobile-slide-3-1000.webp"
+      imagesrcset="assets/img/mobile/mobile-slide-3-720.webp 720w,
+                   assets/img/mobile/mobile-slide-3-1000.webp 1000w,
+                   assets/img/mobile/mobile-slide-3-1400.webp 1400w"
+      imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(min-width: 861px)"
+      href="assets/img/slide-1-1600.webp"
+      imagesrcset="assets/img/slide-1-1000.webp 1000w,
+                   assets/img/slide-1-1600.webp 1600w,
+                   assets/img/slide-1-2400.webp 2400w"
+      imagesizes="100vw" fetchpriority="high">
 <link rel="icon" href="assets/img/favicon.png" type="image/png">
-<link rel="stylesheet" href="assets/css/styles.css?v=11">
+<link rel="stylesheet" href="assets/css/styles.css?v=18">
 </head>
 <body>
 <a class="skip-link" href="#main">К основному содержанию</a>
 <header class="site-header">
   <a class="logo" href="./" aria-label="ann tim — на главную">
-    <img src="assets/img/logo.png" alt="ann tim" width="238" height="194">
+    <picture>
+      <source type="image/webp"
+              srcset="assets/img/logo-100.webp 100w, assets/img/logo-200.webp 200w"
+              sizes="(max-width: 860px) 50px, min(4.8vw, 92px)">
+      <img src="assets/img/logo.png" alt="ann tim" width="238" height="194"
+           fetchpriority="high" decoding="async">
+    </picture>
   </a>
 
   <button class="nav-toggle" type="button" data-nav-toggle
@@ -40,9 +58,15 @@
 </header>
 
 <main class="hero" id="main" data-carousel>
+  <h1 class="visually-hidden">ann tim — студия дизайна интерьеров</h1>
   <div class="hero__slides">
       <figure class="slide is-active" aria-hidden="false">
         <picture>
+          <source media="(max-width: 860px)" type="image/webp"
+                  srcset="assets/img/mobile/mobile-slide-3-720.webp 720w,
+                          assets/img/mobile/mobile-slide-3-1000.webp 1000w,
+                          assets/img/mobile/mobile-slide-3-1400.webp 1400w"
+                  sizes="100vw">
           <source media="(max-width: 860px)" type="image/jpeg"
                   srcset="assets/img/mobile/mobile-slide-3-1000.jpg?v=2 1000w,
                           assets/img/mobile/mobile-slide-3-1400.jpg?v=2 1400w"
@@ -60,6 +84,11 @@
       </figure>
       <figure class="slide" aria-hidden="true">
         <picture>
+          <source media="(max-width: 860px)" type="image/webp"
+                  srcset="assets/img/mobile/mobile-slide-7-720.webp 720w,
+                          assets/img/mobile/mobile-slide-7-1000.webp 1000w,
+                          assets/img/mobile/mobile-slide-7-1400.webp 1400w"
+                  sizes="100vw">
           <source media="(max-width: 860px)" type="image/jpeg"
                   srcset="assets/img/mobile/mobile-slide-7-1000.jpg?v=2 1000w,
                           assets/img/mobile/mobile-slide-7-1400.jpg?v=2 1400w"
@@ -77,6 +106,11 @@
       </figure>
       <figure class="slide" aria-hidden="true">
         <picture>
+          <source media="(max-width: 860px)" type="image/webp"
+                  srcset="assets/img/mobile/mobile-slide-4-720.webp 720w,
+                          assets/img/mobile/mobile-slide-4-1000.webp 1000w,
+                          assets/img/mobile/mobile-slide-4-1400.webp 1400w"
+                  sizes="100vw">
           <source media="(max-width: 860px)" type="image/jpeg"
                   srcset="assets/img/mobile/mobile-slide-4-1000.jpg?v=2 1000w,
                           assets/img/mobile/mobile-slide-4-1400.jpg?v=2 1400w"
@@ -94,6 +128,11 @@
       </figure>
       <figure class="slide" aria-hidden="true">
         <picture>
+          <source media="(max-width: 860px)" type="image/webp"
+                  srcset="assets/img/mobile/mobile-slide-6-720.webp 720w,
+                          assets/img/mobile/mobile-slide-6-1000.webp 1000w,
+                          assets/img/mobile/mobile-slide-6-1400.webp 1400w"
+                  sizes="100vw">
           <source media="(max-width: 860px)" type="image/jpeg"
                   srcset="assets/img/mobile/mobile-slide-6-1000.jpg?v=2 1000w,
                           assets/img/mobile/mobile-slide-6-1400.jpg?v=2 1400w"
@@ -111,6 +150,11 @@
       </figure>
       <figure class="slide" data-mobile-only aria-hidden="true">
         <picture>
+          <source media="(max-width: 860px)" type="image/webp"
+                  srcset="assets/img/mobile/mobile-slide-2-720.webp 720w,
+                          assets/img/mobile/mobile-slide-2-1000.webp 1000w,
+                          assets/img/mobile/mobile-slide-2-1400.webp 1400w"
+                  sizes="100vw">
           <source media="(max-width: 860px)" type="image/jpeg"
                   srcset="assets/img/mobile/mobile-slide-2-1000.jpg?v=2 1000w,
                           assets/img/mobile/mobile-slide-2-1400.jpg?v=2 1400w"
@@ -124,26 +168,36 @@
       </figure>
       <figure class="slide" data-mobile-only aria-hidden="true">
         <picture>
+          <source media="(max-width: 860px)" type="image/webp"
+                  srcset="assets/img/mobile/mobile-slide-1-720.webp 720w,
+                          assets/img/mobile/mobile-slide-1-1000.webp 1000w,
+                          assets/img/mobile/mobile-slide-1-1400.webp 1400w"
+                  sizes="100vw">
           <source media="(max-width: 860px)" type="image/jpeg"
                   srcset="assets/img/mobile/mobile-slide-1-1000.jpg?v=2 1000w,
                           assets/img/mobile/mobile-slide-1-1400.jpg?v=2 1400w"
                   sizes="100vw">
           <img style="--pos:50%" src="assets/img/mobile/mobile-slide-1-1000.jpg?v=2"
                alt="Интерьер проекта студии ann tim"
-               width="1000" height="1328"
+               width="1000" height="1332"
                loading="lazy"
                decoding="async">
         </picture>
       </figure>
       <figure class="slide" data-mobile-only aria-hidden="true">
         <picture>
+          <source media="(max-width: 860px)" type="image/webp"
+                  srcset="assets/img/mobile/mobile-slide-5-720.webp 720w,
+                          assets/img/mobile/mobile-slide-5-1000.webp 1000w,
+                          assets/img/mobile/mobile-slide-5-1400.webp 1400w"
+                  sizes="100vw">
           <source media="(max-width: 860px)" type="image/jpeg"
                   srcset="assets/img/mobile/mobile-slide-5-1000.jpg?v=2 1000w,
                           assets/img/mobile/mobile-slide-5-1400.jpg?v=2 1400w"
                   sizes="100vw">
           <img style="--pos:50%" src="assets/img/mobile/mobile-slide-5-1000.jpg?v=2"
                alt="Интерьер проекта студии ann tim"
-               width="1000" height="1328"
+               width="1000" height="1333"
                loading="lazy"
                decoding="async">
         </picture>
@@ -161,6 +215,6 @@
   </div>
 </main>
 
-<script src="assets/js/main.js?v=5" defer></script>
+<script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>

@@ -82,8 +82,17 @@
   }
 
   function preload(url) {
-    var image = new Image();
-    image.src = url;
+    function start() {
+      var image = new Image();
+      image.fetchPriority = "low";
+      image.src = url;
+    }
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(start, { timeout: 1500 });
+    } else {
+      window.setTimeout(start, 250);
+    }
   }
 
   function settleImage(image) {
@@ -227,7 +236,8 @@
       button.addEventListener("click", function () { showImage(index); });
 
       thumbnail.alt = "";
-      thumbnail.loading = index === 0 ? "eager" : "lazy";
+      thumbnail.loading = "lazy";
+      thumbnail.fetchPriority = "low";
       thumbnail.decoding = "async";
       thumbnail.addEventListener("load", preserveThumbnailRatio, { once: true });
       thumbnail.src = image.thumb;
@@ -267,7 +277,7 @@
 
     projectTitle.textContent = project.title;
     projectLink.href = project.url;
-    projectLink.setAttribute("aria-label", "Подробнее о проекте " + project.title + " на Behance");
+    projectLink.setAttribute("aria-label", "Подробнее на Behance — проект " + project.title);
     renderThumbs();
     syncThumbs();
     showImage(0, settings.instant);

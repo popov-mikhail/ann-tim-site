@@ -17,13 +17,19 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://popov-mikhail.github.io/ann-tim-site/publications/">
 <link rel="icon" href="../assets/img/favicon.png" type="image/png">
-<link rel="stylesheet" href="../assets/css/styles.css?v=11">
+<link rel="stylesheet" href="../assets/css/styles.css?v=18">
 </head>
 <body>
 <a class="skip-link" href="#main">К основному содержанию</a>
 <header class="site-header">
   <a class="logo" href="../" aria-label="ann tim — на главную">
-    <img src="../assets/img/logo.png" alt="ann tim" width="238" height="194">
+    <picture>
+      <source type="image/webp"
+              srcset="../assets/img/logo-100.webp 100w, ../assets/img/logo-200.webp 200w"
+              sizes="(max-width: 860px) 50px, min(4.8vw, 92px)">
+      <img src="../assets/img/logo.png" alt="ann tim" width="238" height="194"
+           decoding="async">
+    </picture>
   </a>
 
   <button class="nav-toggle" type="button" data-nav-toggle
@@ -45,6 +51,6 @@
   <a class="page__back" href="../">На главную</a>
 </main>
 
-<script src="../assets/js/main.js?v=5" defer></script>
+<script src="../assets/js/main.js?v=6" defer></script>
 </body>
 </html>

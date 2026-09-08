@@ -7,13 +7,19 @@
 <meta name="description" content="Запрошенная страница не найдена. Перейдите на главную страницу студии ann tim или посмотрите проекты.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="/ann-tim-site/assets/img/favicon.png" type="image/png">
-<link rel="stylesheet" href="/ann-tim-site/assets/css/styles.css?v=11">
+<link rel="stylesheet" href="/ann-tim-site/assets/css/styles.css?v=18">
 </head>
 <body>
 <a class="skip-link" href="#main">К основному содержанию</a>
 <header class="site-header">
   <a class="logo" href="/ann-tim-site/" aria-label="ann tim — на главную">
-    <img src="/ann-tim-site/assets/img/logo.png" alt="ann tim" width="238" height="194">
+    <picture>
+      <source type="image/webp"
+              srcset="/ann-tim-site/assets/img/logo-100.webp 100w, /ann-tim-site/assets/img/logo-200.webp 200w"
+              sizes="(max-width: 860px) 50px, min(4.8vw, 92px)">
+      <img src="/ann-tim-site/assets/img/logo.png" alt="ann tim" width="238" height="194"
+           decoding="async">
+    </picture>
   </a>
 </header>
 
@@ -29,6 +35,6 @@
   <div class="error-page__code" aria-hidden="true">404</div>
 </main>
 
-<script src="/ann-tim-site/assets/js/main.js?v=5" defer></script>
+<script src="/ann-tim-site/assets/js/main.js?v=6" defer></script>
 </body>
 </html>
