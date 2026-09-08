@@ -1,0 +1,1403 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "slug": "ostrov-i",
+      "title": "OSTROV I",
+      "sourceUrl": "https://www.behance.net/gallery/253001777/OSTROV-REALIZED",
+      "imageCount": 40,
+      "nextSlug": "mihalkovo-park",
+      "modules": [
+        {
+          "images": [
+            {
+              "file": "01.webp",
+              "width": 1400,
+              "height": 811
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "02.webp",
+              "width": 1400,
+              "height": 1050
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "03.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "04.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "05.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "06.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "07.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "08.webp",
+              "width": 1200,
+              "height": 1594
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "09.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "10.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "11.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "12.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "13.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "14.webp",
+              "width": 1200,
+              "height": 1594
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "15.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "16.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "17.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "18.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "19.webp",
+              "width": 1400,
+              "height": 1862
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "20.webp",
+              "width": 1200,
+              "height": 1594
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "21.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "22.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "23.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "24.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "25.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "26.webp",
+              "width": 1200,
+              "height": 1594
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "27.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "28.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "29.webp",
+              "width": 1200,
+              "height": 1594
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "30.webp",
+              "width": 1400,
+              "height": 1936
+            },
+            {
+              "file": "31.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "32.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "33.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "34.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "35.webp",
+              "width": 1200,
+              "height": 1680
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "36.webp",
+              "width": 1400,
+              "height": 1960
+            },
+            {
+              "file": "37.webp",
+              "width": 1400,
+              "height": 1960
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "38.webp",
+              "width": 1200,
+              "height": 1594
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "39.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "40.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mihalkovo-park",
+      "title": "MIHALKOVO PARK",
+      "sourceUrl": "https://www.behance.net/gallery/203480033/MIHALKOVO-PARK",
+      "imageCount": 27,
+      "nextSlug": "avenue-park",
+      "modules": [
+        {
+          "images": [
+            {
+              "file": "01.webp",
+              "width": 1400,
+              "height": 811
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "02.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "03.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "04.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "05.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "06.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "07.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "08.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "09.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "10.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "11.webp",
+              "width": 1200,
+              "height": 1595
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "12.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "13.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "14.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "15.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "16.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "17.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "18.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "19.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "20.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "21.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "22.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "23.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "24.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "25.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "26.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "27.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "avenue-park",
+      "title": "AVENUE PARK",
+      "sourceUrl": "https://www.behance.net/gallery/203477253/AVENUE-PARK",
+      "imageCount": 53,
+      "nextSlug": "novopeshchanaya",
+      "modules": [
+        {
+          "images": [
+            {
+              "file": "01.webp",
+              "width": 1400,
+              "height": 811
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "02.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "03.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "04.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "05.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "06.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "07.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "08.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "09.webp",
+              "width": 1400,
+              "height": 1750
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "10.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "11.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "12.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "13.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "14.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "15.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "16.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "17.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "18.webp",
+              "width": 1200,
+              "height": 1594
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "19.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "20.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "21.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "22.webp",
+              "width": 1400,
+              "height": 1750
+            },
+            {
+              "file": "23.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "24.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "25.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "26.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "27.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "28.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "29.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "30.webp",
+              "width": 1400,
+              "height": 1750
+            },
+            {
+              "file": "31.webp",
+              "width": 1400,
+              "height": 1793
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "32.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "33.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "34.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "35.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "36.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "37.webp",
+              "width": 1400,
+              "height": 1783
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "38.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "39.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "40.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "41.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "42.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "43.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "44.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "45.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "46.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "47.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "48.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "49.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "50.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "51.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "52.webp",
+              "width": 1400,
+              "height": 1860
+            },
+            {
+              "file": "53.webp",
+              "width": 1400,
+              "height": 1860
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "novopeshchanaya",
+      "title": "NOVOPESCHANAYA",
+      "sourceUrl": "https://www.behance.net/gallery/253000679/NOVOPESCHANAYA-REALIZED",
+      "imageCount": 38,
+      "nextSlug": "ostrov-ii",
+      "modules": [
+        {
+          "images": [
+            {
+              "file": "01.webp",
+              "width": 1400,
+              "height": 811
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "02.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "03.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "04.webp",
+              "width": 1400,
+              "height": 1899
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "05.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "06.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "07.webp",
+              "width": 1400,
+              "height": 1866
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "08.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "09.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "10.webp",
+              "width": 1400,
+              "height": 2098
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "11.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "12.webp",
+              "width": 1400,
+              "height": 1867
+            },
+            {
+              "file": "13.webp",
+              "width": 1400,
+              "height": 1866
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "14.webp",
+              "width": 1200,
+              "height": 1700
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "15.webp",
+              "width": 1400,
+              "height": 1865
+            },
+            {
+              "file": "16.webp",
+              "width": 1400,
+              "height": 1865
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "17.webp",
+              "width": 1200,
+              "height": 1599
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "18.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "19.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "20.webp",
+              "width": 1200,
+              "height": 1600
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "21.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "22.webp",
+              "width": 1400,
+              "height": 1866
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "23.webp",
+              "width": 1200,
+              "height": 1599
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "24.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "25.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "26.webp",
+              "width": 1200,
+              "height": 1599
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "27.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "28.webp",
+              "width": 1400,
+              "height": 1867
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "29.webp",
+              "width": 1200,
+              "height": 1599
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "30.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "31.webp",
+              "width": 1400,
+              "height": 1866
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "32.webp",
+              "width": 1200,
+              "height": 1599
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "33.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "34.webp",
+              "width": 1400,
+              "height": 1866
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "35.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "36.webp",
+              "width": 1400,
+              "height": 1866
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "37.webp",
+              "width": 1400,
+              "height": 1866
+            },
+            {
+              "file": "38.webp",
+              "width": 1400,
+              "height": 1866
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ostrov-ii",
+      "title": "OSTROV II",
+      "sourceUrl": "https://www.behance.net/gallery/252999577/OSTROV-REALIZED",
+      "imageCount": 19,
+      "nextSlug": "ostrov-i",
+      "modules": [
+        {
+          "images": [
+            {
+              "file": "01.webp",
+              "width": 1400,
+              "height": 811
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "02.webp",
+              "width": 1200,
+              "height": 1680
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "03.webp",
+              "width": 1400,
+              "height": 1960
+            },
+            {
+              "file": "04.webp",
+              "width": 1400,
+              "height": 1960
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "05.webp",
+              "width": 1200,
+              "height": 1680
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "06.webp",
+              "width": 1400,
+              "height": 1960
+            },
+            {
+              "file": "07.webp",
+              "width": 1400,
+              "height": 1960
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "08.webp",
+              "width": 1200,
+              "height": 1680
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "09.webp",
+              "width": 1400,
+              "height": 1960
+            },
+            {
+              "file": "10.webp",
+              "width": 1400,
+              "height": 1960
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "11.webp",
+              "width": 1200,
+              "height": 1680
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "12.webp",
+              "width": 1400,
+              "height": 1960
+            },
+            {
+              "file": "13.webp",
+              "width": 1400,
+              "height": 1960
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "14.webp",
+              "width": 1200,
+              "height": 1680
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "15.webp",
+              "width": 1400,
+              "height": 1960
+            },
+            {
+              "file": "16.webp",
+              "width": 1400,
+              "height": 1960
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "17.webp",
+              "width": 1200,
+              "height": 1680
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "file": "18.webp",
+              "width": 1400,
+              "height": 1960
+            },
+            {
+              "file": "19.webp",
+              "width": 1400,
+              "height": 1960
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -36,6 +36,9 @@ function localTarget(page, rawReference) {
 }
 
 const htmlFiles = filesIn(root, ".html");
+const projectDetails = JSON.parse(
+  readFileSync(join(root, "assets/data/project-details.json"), "utf8")
+);
 
 for (const page of htmlFiles) {
   const html = readFileSync(page, "utf8");
@@ -64,6 +67,10 @@ for (const page of htmlFiles) {
 const publicPages = [
   ["index.html", "https://popov-mikhail.github.io/ann-tim-site/"],
   ["projects/index.html", "https://popov-mikhail.github.io/ann-tim-site/projects/"],
+  ...projectDetails.projects.map((project) => [
+    `projects/${project.slug}/index.html`,
+    `https://popov-mikhail.github.io/ann-tim-site/projects/${project.slug}/`
+  ]),
   ["about/index.html", "https://popov-mikhail.github.io/ann-tim-site/about/"],
   ["publications/index.html", "https://popov-mikhail.github.io/ann-tim-site/publications/"],
   ["contacts/index.html", "https://popov-mikhail.github.io/ann-tim-site/contacts/"]
@@ -103,6 +110,20 @@ for (const key of projectKeys) {
   }
 }
 
+for (const project of projectDetails.projects) {
+  const images = project.modules.flatMap((module) => module.images);
+  if (images.length !== project.imageCount) {
+    errors.push(`project-details.json: неверное число изображений у ${project.slug}`);
+  }
+
+  for (const image of images) {
+    const target = join(root, "assets/img/project-details", project.slug, image.file);
+    if (!existsSync(target)) {
+      errors.push(`project-details.json: не найден ${relative(root, target)}`);
+    }
+  }
+}
+
 const sitemap = readFileSync(join(root, "sitemap.xml"), "utf8");
 for (const [, expectedUrl] of publicPages) {
   if (!sitemap.includes(`<loc>${expectedUrl}</loc>`)) {
@@ -117,5 +138,6 @@ if (errors.length) {
   console.log(`✓ Проверено HTML-страниц: ${htmlFiles.length}`);
   console.log(`✓ Проверено публичных адресов: ${publicPages.length}`);
   console.log(`✓ Проверено галерей проектов: ${projectKeys.length}`);
+  console.log(`✓ Проверено подробных страниц проектов: ${projectDetails.projects.length}`);
   console.log("✓ Локальные ссылки, ресурсы и обязательные метаданные в порядке");
 }

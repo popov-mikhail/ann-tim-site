@@ -20,27 +20,27 @@
     {
       key: "ostrov-realized-01",
       title: "OSTROV I",
-      url: "https://www.behance.net/gallery/253001777/OSTROV-REALIZED"
+      url: "./ostrov-i/"
     },
     {
       key: "mihalkovo-park",
       title: "MIHALKOVO PARK",
-      url: "https://www.behance.net/gallery/203480033/MIHALKOVO-PARK"
+      url: "./mihalkovo-park/"
     },
     {
       key: "avenue-park-new",
       title: "AVENUE PARK",
-      url: "https://www.behance.net/gallery/203477253/AVENUE-PARK"
+      url: "./avenue-park/"
     },
     {
       key: "novopesch-realized",
       title: "NOVOPESCHANAYA",
-      url: "https://www.behance.net/gallery/253000679/NOVOPESCHANAYA-REALIZED"
+      url: "./novopeshchanaya/"
     },
     {
       key: "ostrov-realized-02",
       title: "OSTROV II",
-      url: "https://www.behance.net/gallery/252999577/OSTROV-REALIZED"
+      url: "./ostrov-ii/"
     }
   ].map(function (project) {
     project.images = imagePaths(project.key);
@@ -280,7 +280,7 @@
 
     projectTitle.textContent = project.title;
     projectLink.href = project.url;
-    projectLink.setAttribute("aria-label", "Подробнее на Behance — проект " + project.title);
+    projectLink.setAttribute("aria-label", "Смотреть проект " + project.title);
     renderThumbs();
     syncThumbs();
     showImage(0, settings.instant);
