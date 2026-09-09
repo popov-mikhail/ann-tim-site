@@ -971,6 +971,17 @@ body.is-lightbox-open { overflow: hidden; }
 }
 
 @media (min-width: 861px) {
+  .project-detail__module--pair {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-detail__module--pair .project-detail__figure,
+  .project-detail__module--pair .project-detail__open {
+    width: auto;
+    max-width: 100%;
+  }
+
   .project-detail__module--single .project-detail__image {
     max-height: min(80svh, 840px);
   }
