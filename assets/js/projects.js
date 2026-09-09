@@ -10,8 +10,8 @@
     return [1, 2, 3, 4, 5, 6].map(function (number) {
       var file = String(number).padStart(2, "0");
       return {
-        full: "../assets/img/projects/" + key + "/" + file + ".webp?v=2",
-        thumb: "../assets/img/projects/" + key + "/" + file + "-thumb.webp?v=2"
+        full: "../assets/img/projects/" + key + "/" + file + ".webp?v=3",
+        thumb: "../assets/img/projects/" + key + "/" + file + "-thumb.webp?v=3"
       };
     });
   }
