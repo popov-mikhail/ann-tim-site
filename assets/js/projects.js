@@ -10,15 +10,15 @@
     return [1, 2, 3, 4, 5, 6].map(function (number) {
       var file = String(number).padStart(2, "0");
       return {
-        full: "../assets/img/projects/" + key + "/" + file + ".webp?v=3",
-        thumb: "../assets/img/projects/" + key + "/" + file + "-thumb.webp?v=3"
+        full: "../assets/img/projects/" + key + "/" + file + ".webp?v=4",
+        thumb: "../assets/img/projects/" + key + "/" + file + "-thumb.webp?v=4"
       };
     });
   }
 
   var projects = [
     {
-      key: "ostrov-realized-01",
+      key: "ostrov-i",
       title: "OSTROV I",
       url: "./ostrov-i/"
     },
@@ -28,17 +28,17 @@
       url: "./mihalkovo-park/"
     },
     {
-      key: "avenue-park-new",
+      key: "avenue-park",
       title: "AVENUE PARK",
       url: "./avenue-park/"
     },
     {
-      key: "novopesch-realized",
+      key: "novopeshchanaya",
       title: "NOVOPESCHANAYA",
       url: "./novopeshchanaya/"
     },
     {
-      key: "ostrov-realized-02",
+      key: "ostrov-ii",
       title: "OSTROV II",
       url: "./ostrov-ii/"
     }
@@ -46,6 +46,13 @@
     project.images = imagePaths(project.key);
     return project;
   });
+
+  var legacyProjectKeys = {
+    "ostrov-realized-01": "ostrov-i",
+    "avenue-park-new": "avenue-park",
+    "novopesch-realized": "novopeshchanaya",
+    "ostrov-realized-02": "ostrov-ii"
+  };
 
   var tabsBar = gallery.querySelector("[data-project-tabs]");
   var stage = gallery.querySelector("[data-project-stage]");
@@ -406,6 +413,7 @@
   });
 
   var hashKey = window.location.hash.replace(/^#/, "");
-  var initialProject = projects.findIndex(function (project) { return project.key === hashKey; });
+  var normalizedHashKey = legacyProjectKeys[hashKey] || hashKey;
+  var initialProject = projects.findIndex(function (project) { return project.key === normalizedHashKey; });
   selectProject(initialProject === -1 ? 0 : initialProject, { instant: true, skipHash: !hashKey });
 })();

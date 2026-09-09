@@ -99,6 +99,17 @@ for (const [file, expectedUrl] of publicPages) {
 
 const projectScript = readFileSync(join(root, "assets/js/projects.js"), "utf8");
 const projectKeys = [...projectScript.matchAll(/\bkey:\s*"([^"]+)"/g)].map((match) => match[1]);
+const projectUrls = [...projectScript.matchAll(/\burl:\s*"([^"]+)"/g)].map((match) => match[1]);
+const detailSlugs = projectDetails.projects.map((project) => project.slug);
+const expectedProjectUrls = detailSlugs.map((slug) => `./${slug}/`);
+
+if (JSON.stringify(projectKeys) !== JSON.stringify(detailSlugs)) {
+  errors.push("projects.js: идентификаторы превью не совпадают со slug подробных страниц");
+}
+
+if (JSON.stringify(projectUrls) !== JSON.stringify(expectedProjectUrls)) {
+  errors.push("projects.js: ссылки превью не совпадают с адресами подробных страниц");
+}
 
 for (const key of projectKeys) {
   for (let number = 1; number <= 6; number += 1) {
