@@ -922,7 +922,7 @@ body.is-lightbox-open { overflow: hidden; }
 
 .project-detail__stream {
   display: grid;
-  gap: clamp(30px, 5.2vw, 78px);
+  gap: clamp(22px, 3vw, 46px);
 }
 
 .project-detail__module {
@@ -930,7 +930,7 @@ body.is-lightbox-open { overflow: hidden; }
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  gap: clamp(10px, 1.15vw, 18px);
+  gap: clamp(8px, 0.8vw, 12px);
   align-items: center;
   justify-items: center;
 }
@@ -968,6 +968,12 @@ body.is-lightbox-open { overflow: hidden; }
   max-height: min(72svh, 760px);
   object-fit: contain;
   background: var(--paper);
+}
+
+@media (min-width: 861px) {
+  .project-detail__module--single .project-detail__image {
+    max-height: min(80svh, 840px);
+  }
 }
 
 .project-detail__navigation {
