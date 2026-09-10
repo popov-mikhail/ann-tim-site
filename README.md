@@ -4,7 +4,8 @@
 Опубликован через GitHub Pages:
 <https://popov-mikhail.github.io/ann-tim-site/>.
 
-Актуальные задачи хранятся в [`BACKLOG.md`](BACKLOG.md), результаты последнего
+Краткий контекст для продолжения работы хранится в [`HANDOFF.md`](HANDOFF.md),
+актуальные задачи — в [`BACKLOG.md`](BACKLOG.md), результаты последнего
 технического аудита — в [`AUDIT.md`](AUDIT.md).
 
 ## Страницы
